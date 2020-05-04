@@ -6,5 +6,5 @@ This is a VSCode extension that adds syntax highlighting to the Hero templating 
 
 Digitalbrainstem's EJS grammar extension was heavily referenced to create this extension. https://github.com/Digitalbrainstem/ejs-grammar
 
-This extension works by extending the HTML syntax in VSCode. This isn't ideal for a couple of reasons (e.g. we can't use our own language-configuration.json, and we have to turn off HTML linting), so an eventual goal of this extension is to 
+This extension works by extending the HTML syntax in VSCode. This isn't ideal for a couple of reasons (e.g. we can't use our own language-configuration.json, and we have to turn off HTML linting), so an eventual goal of this extension is to separate the syntax into its own language ID. There is an [outstanding VSCode issue](https://github.com/microsoft/vscode/issues/49210) which aims to make writing extensions for  templating languages easier.
 
