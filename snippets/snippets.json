@@ -1,0 +1,100 @@
+{
+  "Import statement": {
+      "prefix": "<%!",
+      "body": "<%! \"${importPath}\" %>",
+      "description": "Import statement"
+  },
+  "Code statement": {
+      "prefix": "<% ",
+      "body": [
+          "<%",
+          "${code}",
+          "%>"
+      ],
+      "description": "Code statement"
+  },
+  "If statment": {
+      "prefix": "<% if",
+      "body": "<% if ${conditions} { %>${result}<% } %>",
+      "description": "If statment"
+  },
+  "If/else statement": {
+      "prefix": "<% ife",
+      "body": "<% if ${conditions} { %>${result1}<% } else { %>${result1}<% } %>",
+      "description": "If/else statement"
+  },
+  "If/elseif/else statement": {
+      "prefix": "<% ifelif",
+      "body": "<% if ${conditions} { %>${result1}<% } else if { %>${result2}<% } else { %>${result3}<% } %>",
+      "description": "If/elseif/else statement"
+  },
+  "For statement": {
+      "prefix": "<% for",
+      "body": [
+          "<% for ${key}, ${value} := range ${values} { %>",
+          "\t${result}",
+          "<% } %>"
+      ],
+      "description": "For statement"
+  },
+  "For counter statement": {
+      "prefix": "<% fori",
+      "body": [
+          "<% for ${var} := 0; ${var} < ${limit}; ${var}++ { %>",
+          "\t${result}",
+          "<% } %>"
+      ],
+      "description": "For counter statement"
+  },
+  "Define function": {
+      "prefix": "<% func",
+      "body": [
+          "<% func ${functionName}(${parameters}) { %>",
+          "\t${result}",
+          "<% } %>"
+      ],
+      "description": "Define function"
+  },
+
+
+
+  "Block": {
+      "prefix": "<%@",
+      "body": "<%@ { \"${blockName}\" } %>",
+      "description": "block"
+  },
+  "Include": {
+      "prefix": "<%+",
+      "body": "<%+ \"${include}\" %>",
+      "description": "include"
+  },
+  "Comment": {
+      "prefix": "<%#",
+      "body": "<%# \"${comment}\" %>",
+      "description": "comment"
+  },
+  
+
+
+
+  "Bool": {
+      "prefix": "<%=b",
+      "body": "<%= ${var} %>",
+      "description": "true/false. Escaped with html.EscapeString."
+  },
+  "Int": {
+      "prefix": "<%=i",
+      "body": "<%= ${var} %>",
+      "description": "Signed integer. Escaped with html.EscapeString."
+  },
+  "Float": {
+      "prefix": "<%=f",
+      "body": "<%= ${var} %>",
+      "description": "Float. Escaped with html.EscapeString."
+  },
+  "String": {
+      "prefix": "<%=s",
+      "body": "<%= ${var} %>",
+      "description": "String. Escaped with html.EscapeString."
+  }
+}

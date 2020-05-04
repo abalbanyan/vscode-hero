@@ -1,0 +1,60 @@
+{
+	"name": "vscode-hero",
+	"displayName": "Hero Syntax Highlighting",
+	"description": "Syntax highlighting for the Hero templating language.",
+	"version": "0.1.0",
+	"license": "MIT",
+	"icon": "assets/hero.png",
+	"publisher": "abalbanyan",
+	"author": {
+		"name": "Abdullah Albanyan"
+	},
+	"engines": {
+		"vscode": "^0.10.x"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"Hero",
+		"Hero templates",
+		"go templates",
+		"syntax highlighting"
+	],
+	"contributes": {
+		"grammars": [
+			{
+				"scopeName": "text.hero",
+				"path": "./syntaxes/hero.json",
+				"injectTo": [
+					"text.html"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.hero": "hero",
+					"meta.embedded.block.go": "source.go"
+				}
+			}
+		],
+		"snippets": [
+			{
+				"language": "hero",
+				"path": "./snippets/snippets.json"
+			}
+		],
+		"configurationDefaults": {
+			"files.associations": {
+				"*.hero": "hero"
+			},
+			"emmet.includeLanguages": {
+				"hero": "hero"
+			}
+		}
+	},
+	"bugs": {
+		"url": "https://github.com/abalbanyan/vscode-hero/issues",
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/abalbanyan/vscode-hero.git"
+	}
+}

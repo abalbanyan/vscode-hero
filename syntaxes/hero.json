@@ -1,0 +1,149 @@
+{
+	"name": "Embedded Javascript",
+	"scopeName": "text.hero",
+	"injectionSelector": "L:text.html",
+	"patterns": [
+		{
+			"include": "#tag-block-comment"
+		},
+		{
+			"include": "#tag-single-line-section-comment"
+		},
+		{
+			"include":"#tag-section-comment"
+		},
+		{
+			"include":"#tag-hero-single-line"
+		},
+		{
+			"include":"#tag-hero-multi-line"
+		}
+	],
+	"repository": {
+		"tag-block-comment": {
+			"begin": "<%#",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.hero"
+				}
+			},
+			"end": "(%>)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.hero"
+				}
+			},
+			"name": "comment.block.hero"
+		},
+		"tag-single-line-section-comment": {
+			"begin": "(<%[+=@!:]?[biufsv]? )\\s*((\/\\*)(.*)(\\*\/))(?=(\\s*( %>)))",
+			"captures": {
+				"1": {
+					"name": "punctuation.definition.tag.begin.hero"
+				},
+				"3": {
+					"name": "punctuation.definition.comment.hero"
+				},
+				"5": {
+					"name": "punctuation.definition.comment.hero"
+				},
+				"2": {
+					"name": "comment.block.hero"
+				}
+			},
+			"end": "( %>)",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.end.hero"
+				}
+			},
+			"contentName": "comment.block.hero",
+			"name":"meta.block.single.comment.hero"
+		},
+		"tag-section-comment": {
+			"name":"comment.block.hero",
+			"begin":"(<%)\\s*((?=(\/\\*)))",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.begin.hero"
+				}
+			},
+			"end": "(\\*\/)\\s*%>",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.comment.hero"
+				},
+				"2": {
+					"name": "punctuation.definition.tag.end.hero"
+				}
+			},
+			"patterns":[
+				{
+					"include":"text.hero"
+				}
+			]
+		},
+		
+		"tag-hero-single-line": {
+			"name": "meta.tag.metadata.script.hero",
+			"begin":"(<%[+=@!:]?[biufsv]? )(?!(\\s*\\*\/))(.+)(?=( %>))",
+			"beginCaptures": {
+				"0": {
+					"contentName":"source.go",
+					"name": "meta.embedded.*"
+				},
+				"1": {
+					"name": "punctuation.definition.tag.begin.hero"
+				},
+				"3": {
+					"name": "meta.embedded.hero",
+					"contentName": "source.go",
+					"patterns":[
+						{
+							"include":"source.go"
+						}
+					]
+				},
+				"4": {
+					"name": "punctuation.definition.tag.end.hero"
+				}
+			},
+			"end": "( %>)",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.end.hero"
+				}
+			}
+		},
+		"tag-hero-multi-line": {
+			"contentName":"source.go",
+			"name": "meta.block.hero",
+			"begin":"(<%[+=@!:]?[biufsv]?)(?!(\\s*\\*\/))",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.begin.hero"
+				},
+				"3": {
+					"name": "meta.embedded.hero",
+					"contentName": "source.go",
+					"patterns":[
+						{
+							"include":"source.go"
+						}
+					]
+				}
+			},
+			"end": "(%>)",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.end.hero"
+				}
+			},
+			"patterns":[
+				{
+					"include":"source.go"
+				}
+			]
+		}
+	}
+}
