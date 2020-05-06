@@ -2,7 +2,7 @@
 	"name": "vscode-hero",
 	"displayName": "Hero Syntax Highlighting",
 	"description": "Syntax highlighting for the Hero templating language.",
-	"version": "0.1.0",
+	"version": "0.2.1",
 	"license": "MIT",
 	"icon": "assets/hero.png",
 	"publisher": "abalbanyan",

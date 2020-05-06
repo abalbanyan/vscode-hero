@@ -36,7 +36,7 @@
 			"name": "comment.block.hero"
 		},
 		"tag-single-line-section-comment": {
-			"begin": "(<%[+=@!:]?[biufsv]? )\\s*((\/\\*)(.*)(\\*\/))(?=(\\s*( %>)))",
+			"begin": "(<%[+=@!:~]?[biufsv]? )\\s*((\/\\*)(.*)(\\*\/))(?=(\\s*( %>)))",
 			"captures": {
 				"1": {
 					"name": "punctuation.definition.tag.begin.hero"
@@ -86,7 +86,7 @@
 		
 		"tag-hero-single-line": {
 			"name": "meta.tag.metadata.script.hero",
-			"begin":"(<%[+=@!:]?[biufsv]? )(?!(\\s*\\*\/))(.+)(?=( %>))",
+			"begin":"(<%[+=@!:~]?[biufsv]? )(?!(\\s*\\*\/))(.+)(?=( %>))",
 			"beginCaptures": {
 				"0": {
 					"contentName":"source.go",
@@ -118,7 +118,7 @@
 		"tag-hero-multi-line": {
 			"contentName":"source.go",
 			"name": "meta.block.hero",
-			"begin":"(<%[+=@!:]?[biufsv]?)(?!(\\s*\\*\/))",
+			"begin":"(<%[+=@!:~]?[biufsv]?)(?!(\\s*\\*\/))",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.tag.begin.hero"
