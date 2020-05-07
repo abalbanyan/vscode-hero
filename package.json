@@ -22,8 +22,15 @@
 		"syntax highlighting"
 	],
 	"contributes": {
+		"languages": [{
+				"id": "hero",
+				"aliases": ["Hero", "hero"],
+				"extensions": ["hero"],
+				"configuration": "./language-configuration.json"
+		}],
 		"grammars": [
 			{
+				"language": "hero",
 				"scopeName": "text.hero",
 				"path": "./syntaxes/hero.json",
 				"injectTo": [
