@@ -2,7 +2,7 @@
 	"name": "vscode-hero",
 	"displayName": "Hero Syntax Highlighting",
 	"description": "Syntax highlighting for the Hero templating language.",
-	"version": "0.1.0",
+	"version": "0.2.1",
 	"license": "MIT",
 	"icon": "assets/hero.png",
 	"publisher": "abalbanyan",
@@ -10,7 +10,7 @@
 		"name": "Abdullah Albanyan"
 	},
 	"engines": {
-		"vscode": "^0.10.x"
+		"vscode": "^0.20.2"
 	},
 	"categories": [
 		"Programming Languages"
@@ -22,8 +22,15 @@
 		"syntax highlighting"
 	],
 	"contributes": {
+		"languages": [{
+				"id": "hero",
+				"aliases": ["Hero", "hero"],
+				"extensions": ["hero"],
+				"configuration": "./language-configuration.json"
+		}],
 		"grammars": [
 			{
+				"language": "hero",
 				"scopeName": "source.hero",
 				"path": "./syntaxes/hero.json",
 				"injectTo": [
